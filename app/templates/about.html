@@ -1,0 +1,80 @@
+{% extends "template.html" %}
+{% block content %}
+<section class="py-5" id="about">
+    <div class="container pr-0">
+        <div class="row">
+            <div class="col-md-6 mx-auto text-center pt-6">
+                <h2>Penjelasan Aplikasi</h2>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-11 mx-auto">
+                <div class="col text-justify">
+                    <div class="col-md-12">
+                        <h4>Abstrak</h4>
+                        <p class="text-black"> Rokok mengandung zat berbahaya yang dapat menyebabkan ketagihan dan
+                            berbagai penyakit bahkan hingga menyebabkan kematian. Dampak buruk tersebut tidak hanya
+                            dirasakan oleh perokok tetapi juga bisa dirasakan oleh masyarakat lainnya saat melakukan
+                            aktivitas pola hidup sehat terutama di kawasan tanpa asap rokok. Dengan demikian penelitian
+                            ini untuk membangun model penerapan deep learning pada klasifikasi citra untuk mendeteksi
+                            orang merokok dan tidak merokok, berbasis website agar dapat digunakan untuk melakukan
+                            monitoring pada kawasan tanpa asap rokok.</p>
+                        <p class="text-black"> Dalam penelitian ini, metode yang digunakan adalah Convolutional Neural
+                            Network dengan arsitektur MobileNetV2. Dataset yang digunakan berupa gambar orang merokok
+                            dan tidak merokok. Sebelum data di proses akan dilakukan preprocessing data yaitu berupa
+                            augmentasi data, pemodelan dan implementasi. </p>
+                        <p class="text-black"> Penelitian ini mengusulkan sebuah aplikasi website menggunakan bahasa
+                            pemrograman Python dengan framework flask. Aplikasi yang dibangun memiliki fitur yang
+                            menampilkan tentang penelitian, penjelasan model, dataset, dan testing dengan menggunakan
+                            real time webcam atau input file. Hasil dari pengujian menunjukkan nilai akurasi 92.45%,
+                            presisi sebesar 95.83%, dan recall sebesar 88.46%. </p>
+                    </div>
+                    <div class="col-md-12 pt-3">
+                        <h4>Abstract</h4>
+                        <p class="text-black font-italic">Cigarettes contain harmful substances that can cause addiction
+                            and various diseases and even cause death. This bad impact is not only felt by active
+                            smokers, but this can also interfere with other people when carrying out healthy lifestyle
+                            activities, especially in areas without smoking. Therefore, this is the basic motivation for
+                            this research to build a model for implementing deep learning in image classification to
+                            detect smoking and non-smoking people, based on a website so that it can be used to monitor
+                            smoke-free areas.</p>
+                        <p class="text-black font-italic">In this study, the method used is the Convolutional Neural
+                            Network with the MobileNetV2 architecture. The dataset used in this study is in the form of
+                            smoking and non-smoking images. The next stage is the preprocessing stage in the form of
+                            data augmentation, modeling, and implementation.</p>
+                        <p class="text-black font-italic">This research was applied to a website using the Python
+                            programming language with the flask framework. The application that is built has features
+                            that display research, explanation of models, datasets, and testing using real time webcams
+                            or input files. The results of the test show an accuracy of 92.45%, a precision of 95.83%,
+                            and a recall of 88.46%.</p>
+                    </div>
+                    <div class=" row ">
+                        <div class="col-md-3 pt-5 ">
+                            <div class="image-profil">
+                                <img class="img-fluid"
+                                    src="../static/images/WhatsApp Image 2022-05-12 at 21.13.50.jpeg" />
+                            </div>
+                        </div>
+                        <div class="col-md-5 pt-5">
+                            <h3 class="fw-bonlder" style="font-weight: 550">Penulis & Perancang Aplikasi</h3>
+                            <h5 class="text-black" style="font-weight: 500">Hadiza Cahya Firdaus</h5>
+                            <p class="text-black" style="font-weight: 400">NPM : 140810180042</p>
+                        </div>
+                        <div class="col-md-4 mb-5 pt-5">
+                            <h3 class="fw-bolder" style="font-weight: 550">Pembimbing Penelitian</h3>
+                            <h5 class="text-black" style="font-weight: 420">Dr. Afrida Helen, M.Kom</h5>
+                            <p class="text-black" style="font-weight: 400">NIP : 19650128 199703 2 001</p>
+                            </br>
+                            <h3 class="fw-bolder" style="font-weight: 550">Co-Pembimbing Penelitian</h3>
+                            <h5 class="text-black" style="font-weight: 420">Akmal, S.Si., MT</h5>
+                            <p class="text-black" style="font-weight: 400">NIP : 19700615 199803 1 993 </p>
+                        </div>
+                        <div class="col-md-12 mb-5">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends "template.html" %}
+{% block content %}
+
+<section class="py-7" id="faq">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto text-center">
+                <h2>Penjelasan Model</h2>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-12 mx-auto">
+                <div class="row">
+                    <div class="col-md-12 mb-5">
+                        <h6>Dataset</h6>
+                        <p class="text-black">Data yang digunakan dalam penelitian ini berupa data gambar yang merupakan
+                            foto sejumlah orang dengan dua kondisi, kondisi pertama diterapkan pada penelitian ini yaitu
+                            kondisi orang yang sedang melakukan aktivitas merokok dan kondisi orang yang sedang tidak
+                            merokok. </p>
+                        <p class="text-black"> Dataset yang dikumpulkan dari penelitian ini beberapa diambil secara
+                            mandiri dan diambil juga dari website Kaggle yang dapat akses <a class="fw-bolder"
+                                href="https://www.kaggle.com/datasets/raj713335/cigrarette-data">disini.</a></p>
+                    </div>
+                    <div class="col-md-12 mb-5">
+                        <h6>Hasil Training Model</h6>
+                        <div class="col-12">
+                            <img src="../static/images/epooch.png" class="img-thumbnail img-fluid mx-auto d-block">
+                            <p class="text-black mt-5">Accuracy : parameter uji yang menentukan kelayakan dari sebuah
+                                sistem dalam mengklasifikasikan pendeteksi aktivitas merokok</p>
+                            <p class="text-black">Loss : parameter uji yang digunakan untuk menghitung data yang tidak
+                                terdeteksi (loss) saat proses pelatihan maupun pengujian</p>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block custom_js %}
+<script>
+    $(document).ready(function () {
+        $('#image-detector').attr('class', 'nav-item');
+        $('#live').attr('class', 'nav-item active');
+    })
+
+    function stop() {
+        $("img").attr("src", "/static/images/stay-safe.jpg");
+        $("#stop").attr("class", "btn btn-danger active");
+
+        $("#start").attr("class", "btn btn-outline-success");
+    }
+
+    function start() {
+        $("img").attr("src", "{{url_for('main.video_feed')}}");
+        $("#start").attr("class", "btn btn-success active");
+
+        $("#stop").attr("class", "btn btn-outline-danger");
+    }
+</script>
+
+{% endblock %}

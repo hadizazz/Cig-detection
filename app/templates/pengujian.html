@@ -1,0 +1,71 @@
+{% extends "template.html" %}
+{% block content %}
+<section class="pt-6 pb-7" id="features">
+    <div class="container">
+        <div class="container-fluid" style="background-color:whitesmoke">
+            <div id="frame_container" class="row">
+                <div class="col-12">
+                    <div>
+                        <img src="/static/images/turn-on.png" class="img-thumbnail img-fluid mx-auto d-block"
+                            style="background-color:whitesmoke">
+                    </div>
+                    <div class="titleDetections">
+                        <h1 id="cig_or_not"></h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3 mb-5">
+                <div class="col-6 d-flex justify-content-end">
+                    <button id="start" onclick="start()" class="btn btn-outline-success"><i class="fa fa-video-camera"
+                            aria-hidden="true"></i> Start
+                    </button>
+                </div>
+                <div class="col-6 d-flex justify-content-start">
+                    <button id="stop" onclick="stop()" class="btn btn-danger active"><i class="fa fa-stop"
+                            aria-hidden="true"></i> Stop
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+{% block custom_js %}
+<script>
+    $(document).ready(function () {
+        $('#image-detector').attr('class', 'nav-item');
+        $('#live').attr('class', 'nav-item active');
+    })
+
+    function stop() {
+        $("img").attr("src", "/static/images/SL4578.png");
+        $("#stop").attr("class", "btn btn-danger active");
+        $("#cig_or_not").attr("class", "d-none");
+
+        $("#start").attr("class", "btn btn-outline-success");
+    }
+
+    function start() {
+        $("img").attr("src", "{{url_for('main.video_feed')}}");
+        $("#start").attr("class", "btn btn-success active");
+        $("#cig_or_not").attr("class", "d-flex");
+
+        $("#stop").attr("class", "btn btn-outline-danger");
+
+        var $SCRIPT_ROOT = 'http://DESKTOP-BC8D30A:8080'
+        var intervalID = setInterval(update_values, 1000);
+
+        function update_values() {
+            $.getJSON($SCRIPT_ROOT + '/data',
+
+                function (data) {
+                    $('#cig_or_not').text(data.cig_or_not)
+                    // $('#confidence').text(data.confidence)
+                });
+
+        };
+    }
+</script>
+
+{% endblock %}
