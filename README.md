@@ -1,23 +1,20 @@
 # Abstrak
-	Coronavirus disease 2019 (COVID-19) merupakan penyakit infeksi
-pernapasan akut yang dapat mematikan, dan dapat menyebar dengan sangat mudah.
-Salah satu bentuk penanganan yang dapat dilakukan oleh setiap individu adalah
-penggunaan masker. Saat manusia terbatuk, bersin dan berbicara dapat
-mengeluarkan droplet berupa air liur. Penggunaan masker dapat mereduksi
-perpindahan droplet yang keluar dari mulut ke orang lain.
-	Penelitian ini bertujuan untuk melakukan prediksi kepada seseorang apakah
-dia menggunakan masker atau tidak menggunakan masker dengan memanfaatkan
-model deep learning convolution neural network. Dengan menggunakan dataset
-berupa foto orang yang menggunakan masker dan tidak menggunakan masker
-diolah melalu tahap preprocessing, augmentasi data, dan pemodelan. Dari hasil
-model ini dapat diprediksi apakah seseorang menggunakan masker atau tidak
-menggunakan masker
-	Dari hasil penelitian didapat nilai akurasi dari validasi model sebesar 100%
-dan nilai validation loss sebesar 0,14%. Dan akurasi dari pengujian sebesar 93,3%
-jika dilakukan dengan kondisi penguji yaitu menggunakan masker dengan benar
-dan tidak menggunakan masker. Dari hasil tersebut dapat disimpulkan bahwa
-pemodelan untuk mendeteksi penggunaan masker sudah dapat berjalan dengan
-sangat baik untuk pendeteksian penggunaan masker
+	Rokok mengandung zat berbahaya yang dapat menyebabkan ketagihan dan
+berbagai penyakit bahkan hingga menyebabkan kematian. Dampak buruk tersebut tidak hanya
+dirasakan oleh perokok tetapi juga bisa dirasakan oleh masyarakat lainnya saat melakukan
+aktivitas pola hidup sehat terutama di kawasan tanpa asap rokok. Dengan demikian 
+penelitian ini untuk membangun model penerapan deep learning pada klasifikasi citra 
+untuk mendeteksi orang merokok dan tidak merokok, berbasis website agar dapat digunakan
+untuk melakukan monitoring pada kawasan tanpa asap rokok.
+	Dalam penelitian ini, metode yang digunakan adalah Convolutional Neural
+Network dengan arsitektur MobileNetV2. Dataset yang digunakan berupa gambar orang merokok
+dan tidak merokok. Sebelum data di proses akan dilakukan preprocessing data yaitu berupa
+augmentasi data, pemodelan dan implementasi.
+	Penelitian ini mengusulkan sebuah aplikasi website menggunakan bahasa
+pemrograman Python dengan framework flask. Aplikasi yang dibangun memiliki fitur yang
+menampilkan tentang penelitian, penjelasan model, dataset, dan testing dengan menggunakan
+real time webcam atau input file. Hasil dari pengujian menunjukkan nilai akurasi 92.45%,
+presisi sebesar 95.83%, dan recall sebesar 88.46%.
 
 ## Framework
 - Keras/Tensorflow
